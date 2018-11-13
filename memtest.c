@@ -20,7 +20,7 @@ int main(int argc, char **argv) {
   long asize = 100000;
   //
   memc = memcached_create(NULL);
-  servers = memcached_server_list_append(servers, "192.168.1.48", 11212, &rc);
+  servers = memcached_server_list_append(servers, "192.168.1.1", 11212, &rc);
   rc = memcached_server_push(memc, servers);
 
   if (rc == MEMCACHED_SUCCESS) {
